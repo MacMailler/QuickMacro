@@ -9,8 +9,9 @@ GTA Online useful macros
 + Numpad0 + Numpad4 - Spawn Buzzard
 + Numpad0 + Numpad5 - Activate ghost team
 + Numpad0 + Numpad6 - Call Mors Mutual Insurance
-+ Numpad0 + Numpad7 - Get armor
++ Numpad0 + Numpad7 - Get heavy armor
 + Numpad0 + Numpad8 - Get snack
 + NumpadAdd - Spawn BST(Bull Shark Testosterone)
 + NumpadDiv - Toggle CEO Mode
 + NumpadSub - Buy ammo
++ LAlt - Fast heavy weapon reload
