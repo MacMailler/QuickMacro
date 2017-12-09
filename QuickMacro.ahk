@@ -10,7 +10,7 @@
 #SingleInstance force
 #IfWinActive ahk_class grcWindow
 
-Menu, Tray, Icon, %A_ScriptDir%\assets\quickmacro.ico
+Menu, Tray, Icon, %A_ScriptDir%\assets\icon.ico
 
 #Include %A_ScriptDir%\includes\variables.ahk
 #Include %A_ScriptDir%\includes\keys.ahk
