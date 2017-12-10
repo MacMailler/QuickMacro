@@ -1,6 +1,4 @@
 ;
-; QuickMacro 1.0
-;
 ; Created by MacMailler, 2017
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
@@ -10,14 +8,16 @@
 #SingleInstance force
 #IfWinActive ahk_class grcWindow
 
+Menu, Tray, Tip, QuickMacro`nDisabled
 Menu, Tray, Icon, %A_ScriptDir%\assets\icon.ico
 
 #Include %A_ScriptDir%\includes\variables.ahk
 #Include %A_ScriptDir%\includes\keys.ahk
 
 End::
-	if(toggleHotkey = 0) {
-		toggleHotkey := 1
+	if(toggleHotkey = "Disabled") {
+		toggleHotkey := "Enabled"
+		Menu, Tray, Tip, QuickMacro`n%toggleHotkey%
 		
 		Hotkey, IfWinActive, ahk_class grcWindow
 		Hotkey, %PegasusKey%, pegasusLabel, on
@@ -34,7 +34,8 @@ End::
 		Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, on
 	}
 	else {
-		toggleHotkey := 0
+		toggleHotkey := "Disabled"
+		Menu, Tray, Tip, QuickMacro`n%toggleHotkey%
 		
 		Hotkey, IfWinActive, ahk_class grcWindow
 		Hotkey, %PegasusKey%, pegasusLabel, off
