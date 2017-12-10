@@ -3,15 +3,15 @@ GTA Online useful macros
 
 # Hotkeys
 + End - Enable/Disable
-+ Numpad0 + Numpad1 - Call Pegasus
-+ Numpad0 + Numpad2 - Call Mechanic
-+ Numpad0 + Numpad3 - Call Lester
-+ Numpad0 + Numpad4 - Spawn Buzzard
-+ Numpad0 + Numpad5 - Activate ghost team
-+ Numpad0 + Numpad6 - Call Mors Mutual Insurance
-+ Numpad0 + Numpad7 - Get heavy armor
-+ Numpad0 + Numpad8 - Get snack
-+ NumpadAdd - Spawn BST(Bull Shark Testosterone)
-+ NumpadDiv - Toggle CEO Mode
-+ NumpadSub - Buy ammo
++ Num0 + Num1 - Call Pegasus
++ Num0 + Num2 - Call Mechanic
++ Num0 + Num3 - Call Lester
++ Num0 + Num4 - Spawn Buzzard
++ Num0 + Num5 - Activate ghost team
++ Num0 + Num6 - Call Mors Mutual Insurance
++ Num0 + Num7 - Get heavy armor
++ Num0 + Num8 - Get snack
++ NumAdd - Spawn BST(Bull Shark Testosterone)
++ NumDiv - Toggle CEO Mode
++ NumSub - Buy ammo
 + LAlt - Fast heavy weapon reload
