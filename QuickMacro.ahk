@@ -9,10 +9,13 @@
 #IfWinActive ahk_class grcWindow
 
 Menu, Tray, Tip, QuickMacro`nDisabled
-Menu, Tray, Icon, %A_ScriptDir%\assets\icon.ico
 
 #Include %A_ScriptDir%\includes\variables.ahk
 #Include %A_ScriptDir%\includes\keys.ahk
+#Include %A_ScriptDir%\includes\conf.ahk
+
+loadConf()
+
 
 End::
 	if(toggleHotkey = "Disabled") {
