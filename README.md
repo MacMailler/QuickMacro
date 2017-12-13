@@ -15,3 +15,4 @@ GTA Online useful macros
 + NumDiv - Toggle CEO Mode
 + NumSub - Buy ammo
 + LAlt - Fast heavy weapon reload
++ NumEnter - Fast EWO
