@@ -31,6 +31,7 @@ loadConf() {
 		IniRead, ToggleCeoKey, %SettingsFile%, Hotkeys, ToggleCeoKey
 		IniRead, MorsMutualKey, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniRead, FastHeavyReloadKey, %SettingsFile%, Hotkeys, FastHeavyReloadKey
+		IniRead, FastEwoKey, %SettingsFile%, Hotkeys, FastEwoKey
 	} else {
 		IniWrite, %keyPhoneDalay%, %SettingsFile%, Delays, KeyPhoneDalay
 		IniWrite, %keyPhoneDuration%, %SettingsFile%, Delays, KeyPhoneDuration
@@ -53,5 +54,6 @@ loadConf() {
 		IniWrite, %ToggleCeoKey%, %SettingsFile%, Hotkeys, ToggleCeoKey
 		IniWrite, %MorsMutualKey%, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniWrite, %FastHeavyReloadKey%, %SettingsFile%, Hotkeys, FastHeavyReloadKey
+		IniWrite, %FastEwoKey%, %SettingsFile%, Hotkeys, FastEwoKey
 	}
 }

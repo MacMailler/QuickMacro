@@ -42,7 +42,7 @@ return
 
 ; Player items
 armorLabel:
-	getItem("Ammo")
+	getItem("Armor")
 return
 
 snackLabel:
@@ -53,6 +53,12 @@ ammoLabel:
 	getItem("Ammo")
 return
 
+
+; Others
 fastHeavyReloadLabel:
 	fastHeavyReload()
+return
+
+fastEwoLabel:
+	fastEwo()
 return

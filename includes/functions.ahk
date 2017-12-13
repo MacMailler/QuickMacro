@@ -86,3 +86,11 @@ fastHeavyReload() {
 	Send {%specialWeaponKey%}
 	Send {%heavyWeaponKey%}
 }
+
+fastEwo() {
+	openM()
+	Send {Up 2}
+	Send {SC02E down}
+	Send {Enter}
+	Send {SC02E up}
+}

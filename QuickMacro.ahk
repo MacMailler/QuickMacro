@@ -16,7 +16,6 @@ Menu, Tray, Tip, QuickMacro`nDisabled
 
 loadConf()
 
-
 End::
 	if(toggleHotkey = "Disabled") {
 		toggleHotkey := "Enabled"
@@ -35,6 +34,7 @@ End::
 		Hotkey, %ToggleCeoKey%, toggleCeoLabel, on
 		Hotkey, %MorsMutualKey%, morsMutualLabel, on
 		Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, on
+		Hotkey, %FastEwoKey%, fastEwoLabel, on
 	}
 	else {
 		toggleHotkey := "Disabled"
@@ -53,6 +53,7 @@ End::
 		Hotkey, %ToggleCeoKey%, toggleCeoLabel, off
 		Hotkey, %MorsMutualKey%, morsMutualLabel, off
 		Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, off
+		Hotkey, %FastEwoKey%, fastEwoLabel, off
 	}
 return
 
