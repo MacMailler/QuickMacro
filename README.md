@@ -1,6 +1,13 @@
 # QuickMacro
 GTA Online useful macros
 
+# Installation and using
+1. [Download](https://github.com/MacMailler/QuickMacro/releases) latest version
+2. Unpack to any place
+3. Run GTA Online
+4. Run QuickMacro.exe
+5. Press the "End" key
+
 # Hotkeys
 + End - Enable/Disable
 + Num0 + Num1 - Call Pegasus
