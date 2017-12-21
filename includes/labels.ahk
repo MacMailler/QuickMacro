@@ -62,3 +62,14 @@ return
 fastEwoLabel:
 	fastEwo()
 return
+
+autoBuyLabel:
+	autoBuy()
+return
+
+autoBuyLoop:
+    while(T) {
+		send {Enter}
+		sleep, 1000
+	}
+return

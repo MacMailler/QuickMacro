@@ -35,6 +35,7 @@ End::
 		Hotkey, %MorsMutualKey%, morsMutualLabel, on
 		Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, on
 		Hotkey, %FastEwoKey%, fastEwoLabel, on
+		Hotkey, %AutoBuyKey%, autoBuyLabel, on
 	}
 	else {
 		toggleHotkey := "Disabled"
@@ -54,6 +55,7 @@ End::
 		Hotkey, %MorsMutualKey%, morsMutualLabel, off
 		Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, off
 		Hotkey, %FastEwoKey%, fastEwoLabel, off
+		Hotkey, %AutoBuyKey%, autoBuyLabel, off
 	}
 return
 

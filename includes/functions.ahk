@@ -94,3 +94,12 @@ fastEwo() {
 	Send {Enter}
 	Send {SC02E up}
 }
+
+autoBuy() {
+	if(T = true) {
+		setTimer, autoBuyLoop, off
+	} else {
+		setTimer, autoBuyLoop, on
+	}
+	T := !T
+}

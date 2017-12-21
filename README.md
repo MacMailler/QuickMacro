@@ -23,3 +23,4 @@ GTA Online useful macros
 + NumSub - Buy ammo
 + LAlt - Fast heavy weapon reload
 + NumEnter - Fast EWO
++ NumDot - Auto buy (snacks, armor and etc.)

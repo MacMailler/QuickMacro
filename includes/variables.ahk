@@ -16,3 +16,5 @@ Global keyMDuration := 36
 
 Global heavyWeaponKey := 4
 Global specialWeaponKey := 5
+
+Global T := false
