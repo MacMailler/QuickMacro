@@ -8,11 +8,11 @@
 #SingleInstance force
 #IfWinActive ahk_class grcWindow
 
-Menu, Tray, Tip, QuickMacro`nDisabled
-
 #Include %A_ScriptDir%\includes\variables.ahk
 #Include %A_ScriptDir%\includes\keys.ahk
 #Include %A_ScriptDir%\includes\conf.ahk
+#Include %A_ScriptDir%\includes\tray.ahk
+#Include %A_ScriptDir%\includes\crosshair.ahk
 
 loadConf()
 
@@ -35,7 +35,8 @@ End::
 		Hotkey, %MorsMutualKey%, morsMutualLabel, on
 		Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, on
 		Hotkey, %FastEwoKey%, fastEwoLabel, on
-		Hotkey, %AutoBuyKey%, autoBuyLabel, on
+		Hotkey, %RepeatButtonKey%, repeatButtonLabel, on
+		Hotkey, %CrosshairKey%, crossHairLabel, on
 	}
 	else {
 		toggleHotkey := "Disabled"
@@ -55,7 +56,8 @@ End::
 		Hotkey, %MorsMutualKey%, morsMutualLabel, off
 		Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, off
 		Hotkey, %FastEwoKey%, fastEwoLabel, off
-		Hotkey, %AutoBuyKey%, autoBuyLabel, off
+		Hotkey, %RepeatButtonKey%, repeatButtonLabel, Off
+		Hotkey, %CrosshairKey%, crossHairLabel, off
 	}
 return
 

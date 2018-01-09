@@ -95,11 +95,21 @@ fastEwo() {
 	Send {SC02E up}
 }
 
-autoBuy() {
-	if(T = true) {
-		setTimer, autoBuyLoop, off
+toggleCrosshair() {
+	if(crossHairT = false) {
+		Gui, QuickMacroCrosshair: Show
+		WinActivate, ahk_class grcWindow
 	} else {
-		setTimer, autoBuyLoop, on
+		Gui, QuickMacroCrosshair: Hide
+	}
+	crossHairT := !crossHairT
+}
+
+repeatButton() {
+	if(T = true) {
+		setTimer, loopRepeatButton, off
+	} else {
+		setTimer, loopRepeatButton, on
 	}
 	T := !T
 }

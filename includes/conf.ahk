@@ -16,8 +16,10 @@ loadConf() {
 		IniRead, menuDelay, %SettingsFile%, Delays, MenuDelay
 		IniRead, keyMDelay, %SettingsFile%, Delays, KeyMDelay
 		IniRead, keyMDuration, %SettingsFile%, Delays, KeyMDuration
+		IniRead, RepeatButtonDelay, %SettingsFile%, Delays, RepeatButtonDelay
 		IniRead, heavyWeaponKey, %SettingsFile%, Keys, HeavyWeaponKey
 		IniRead, specialWeaponKey, %SettingsFile%, Keys, SpecialWeaponKey
+		IniRead, RepeatButton, %SettingsFile%, Keys, RepeatButton
 		
 		IniRead, PegasusKey, %SettingsFile%, Hotkeys, PegasusKey
 		IniRead, MechanicKey, %SettingsFile%, Hotkeys, MechanicKey
@@ -32,7 +34,8 @@ loadConf() {
 		IniRead, MorsMutualKey, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniRead, FastHeavyReloadKey, %SettingsFile%, Hotkeys, FastHeavyReloadKey
 		IniRead, FastEwoKey, %SettingsFile%, Hotkeys, FastEwoKey
-		IniRead, AutoBuyKey, %SettingsFile%, Hotkeys, AutoBuyKey
+		IniRead, RepeatButtonKey, %SettingsFile%, Hotkeys, RepeatButtonKey
+		IniRead, CrosshairKey, %SettingsFile%, Hotkeys, CrosshairKey
 	} else {
 		IniWrite, %keyPhoneDalay%, %SettingsFile%, Delays, KeyPhoneDalay
 		IniWrite, %keyPhoneDuration%, %SettingsFile%, Delays, KeyPhoneDuration
@@ -40,8 +43,10 @@ loadConf() {
 		IniWrite, %menuDelay%, %SettingsFile%, Delays, MenuDelay
 		IniWrite, %keyMDelay%, %SettingsFile%, Delays, KeyMDelay
 		IniWrite, %keyMDuration%, %SettingsFile%, Delays, KeyMDuration
+		IniWrite, %RepeatButtonDelay%, %SettingsFile%, Delays, RepeatButtonDelay
 		IniWrite, %heavyWeaponKey%, %SettingsFile%, Keys, HeavyWeaponKey
 		IniWrite, %specialWeaponKey%, %SettingsFile%, Keys, SpecialWeaponKey
+		IniWrite, %RepeatButton%, %SettingsFile%, Keys, RepeatButton
 		
 		IniWrite, %PegasusKey%, %SettingsFile%, Hotkeys, PegasusKey
 		IniWrite, %MechanicKey%, %SettingsFile%, Hotkeys, MechanicKey
@@ -56,6 +61,7 @@ loadConf() {
 		IniWrite, %MorsMutualKey%, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniWrite, %FastHeavyReloadKey%, %SettingsFile%, Hotkeys, FastHeavyReloadKey
 		IniWrite, %FastEwoKey%, %SettingsFile%, Hotkeys, FastEwoKey
-		IniWrite, %AutoBuyKey%, %SettingsFile%, Hotkeys, AutoBuyKey
+		IniWrite, %RepeatButtonKey%, %SettingsFile%, Hotkeys, RepeatButtonKey
+		IniWrite, %CrosshairKey%, %SettingsFile%, Hotkeys, CrosshairKey
 	}
 }

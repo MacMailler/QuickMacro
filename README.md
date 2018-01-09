@@ -17,10 +17,11 @@ GTA Online useful macros
 + Num0 + Num5 - Activate ghost team
 + Num0 + Num6 - Call Mors Mutual Insurance
 + Num0 + Num7 - Get heavy armor
-+ Num0 + Num8 - Get snack
++ Num0 + Num8 - Repeat button
++ Num0 + Num9 - Show/Hide crosshair
 + NumAdd - Spawn BST(Bull Shark Testosterone)
 + NumDiv - Toggle CEO Mode
 + NumSub - Buy ammo
 + LAlt - Fast heavy weapon reload
 + NumEnter - Fast EWO
-+ NumDot - Auto buy (snacks, armor and etc.)
++ NumDot - Get snack

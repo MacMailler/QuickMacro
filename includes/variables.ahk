@@ -14,6 +14,9 @@ Global menuDelay := 24
 Global keyMDelay := 36
 Global keyMDuration := 36
 
+Global RepeatButtonDelay := 1000
+Global RepeatButton := "Enter"
+
 Global heavyWeaponKey := 4
 Global specialWeaponKey := 5
 

@@ -63,13 +63,21 @@ fastEwoLabel:
 	fastEwo()
 return
 
-autoBuyLabel:
-	autoBuy()
+repeatButtonLabel:
+	repeatButton()
 return
 
-autoBuyLoop:
+crossHairLabel:
+	toggleCrosshair()
+return
+
+loopRepeatButton:
     while(T) {
-		send {Enter}
-		sleep, 1000
+		Send {%RepeatButton%}
+		sleep, RepeatButtonDelay
 	}
+return
+
+exitLabel:
+	ExitApp
 return
