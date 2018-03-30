@@ -1,8 +1,7 @@
 ;
-; (c) MacMailler, 2017
+; Copyright (C) 2017 MacMailler
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
-
 
 Global SettingsFile := "settings.ini"
 
@@ -36,6 +35,7 @@ loadConf() {
 		IniRead, FastEwoKey, %SettingsFile%, Hotkeys, FastEwoKey
 		IniRead, RepeatButtonKey, %SettingsFile%, Hotkeys, RepeatButtonKey
 		IniRead, CrosshairKey, %SettingsFile%, Hotkeys, CrosshairKey
+		IniRead, OutfitFixKey, %SettingsFile%, Hotkeys, OutfitFixKey
 	} else {
 		IniWrite, %keyPhoneDalay%, %SettingsFile%, Delays, KeyPhoneDalay
 		IniWrite, %keyPhoneDuration%, %SettingsFile%, Delays, KeyPhoneDuration
@@ -63,5 +63,6 @@ loadConf() {
 		IniWrite, %FastEwoKey%, %SettingsFile%, Hotkeys, FastEwoKey
 		IniWrite, %RepeatButtonKey%, %SettingsFile%, Hotkeys, RepeatButtonKey
 		IniWrite, %CrosshairKey%, %SettingsFile%, Hotkeys, CrosshairKey
+		IniWrite, %OutfitFixKey%, %SettingsFile%, Hotkeys, OutfitFixKey
 	}
 }

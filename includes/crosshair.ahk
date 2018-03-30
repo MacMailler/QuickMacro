@@ -1,8 +1,7 @@
 ;
-; (c) MacMailler, 2017
+; Copyright (C) 2017 MacMailler
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
-
 
 Global crossHairT := false
 Global crossHairW := 21

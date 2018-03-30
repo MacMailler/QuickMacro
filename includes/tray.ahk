@@ -1,8 +1,7 @@
 ;
-; (c) MacMailler, 2018
+; Copyright (C) 2017 MacMailler
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
-
 
 Menu, Tray, Tip, QuickMacro`nDisabled
 

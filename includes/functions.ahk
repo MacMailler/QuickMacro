@@ -1,8 +1,7 @@
 ;
-; (c) MacMailler, 2017
+; Copyright (C) 2017 MacMailler
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
-
 
 phoneUp() {
 	setkeydelay, %keyPhoneDalay%, %keyPhoneDuration%
@@ -103,6 +102,18 @@ toggleCrosshair() {
 		Gui, QuickMacroCrosshair: Hide
 	}
 	crossHairT := !crossHairT
+}
+
+outfitFix() {
+	openM()
+	
+	if(playerState = 0)
+		Send {Down 2}
+	else
+		Send {Down 3}
+	
+	Send {Enter}{Down 3}{Enter}
+	Send {SC032}
 }
 
 repeatButton() {

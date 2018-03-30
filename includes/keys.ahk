@@ -1,8 +1,7 @@
 ;
-; (c) MacMailler, 2017
+; Copyright (C) 2017 MacMailler
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
-
 
 Global PegasusKey := "Numpad0 & Numpad1"
 Global MechanicKey := "Numpad0 & Numpad2"
@@ -19,3 +18,4 @@ Global FastHeavyReloadKey := "LAlt"
 Global FastEwoKey := "NumpadEnter"
 Global RepeatButtonKey := "Numpad0 & Numpad8"
 Global CrosshairKey := "Numpad0 & Numpad9"
+Global OutfitFixKey := "RCtrl & RShift"

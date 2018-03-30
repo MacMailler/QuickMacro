@@ -1,5 +1,5 @@
 ;
-; (c) MacMailler, 2017
+; Copyright (C) 2017 MacMailler
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
 
@@ -69,6 +69,10 @@ return
 
 crossHairLabel:
 	toggleCrosshair()
+return
+
+outfitFixLabel:
+	outfitFix()
 return
 
 loopRepeatButton:

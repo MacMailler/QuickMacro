@@ -1,5 +1,5 @@
 ;
-; Created by MacMailler, 2017
+; Copyright (C) 2017 MacMailler
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
 
@@ -37,6 +37,7 @@ End::
 		Hotkey, %FastEwoKey%, fastEwoLabel, on
 		Hotkey, %RepeatButtonKey%, repeatButtonLabel, on
 		Hotkey, %CrosshairKey%, crossHairLabel, on
+		Hotkey, %OutfitFixKey%, outfitFixLabel, on
 	}
 	else {
 		toggleHotkey := "Disabled"
@@ -58,6 +59,7 @@ End::
 		Hotkey, %FastEwoKey%, fastEwoLabel, off
 		Hotkey, %RepeatButtonKey%, repeatButtonLabel, Off
 		Hotkey, %CrosshairKey%, crossHairLabel, off
+		Hotkey, %OutfitFixKey%, outfitFixLabel, off
 	}
 return
 
