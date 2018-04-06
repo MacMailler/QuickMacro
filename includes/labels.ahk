@@ -82,6 +82,10 @@ loopRepeatButton:
 	}
 return
 
+activateLabel:
+	init()
+return
+
 exitLabel:
 	ExitApp
 return

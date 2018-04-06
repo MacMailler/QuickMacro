@@ -3,7 +3,7 @@
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
 
-Global toggleHotkey := "Disabled"
+Global hotkeyState := "Off"
 Global playerState := 0
 
 Global keyPhoneDalay := 70

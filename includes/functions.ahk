@@ -3,6 +3,43 @@
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
 
+init() {
+	if (WinExist("Grand Theft Auto V")) {
+		hotkeyState := hotkeyState = "On" ? "Off" : "On"
+		Menu, Tray, Tip, QuickMacro`n%hotkeyState%
+		setHotkeyState(hotkeyState)
+		
+		if (hotkeyState = "On")
+			Menu, Tray, Rename, Activate, Deactivate
+		else
+			Menu, Tray, Rename, Deactivate, Activate
+	} else {
+		msgbox, 0x40, QuickMacro, GTAV is not running!
+	}
+}
+	
+setHotkeyState(t) {
+	Hotkey, IfWinActive, Grand Theft Auto V
+	Hotkey, %PegasusKey%, pegasusLabel, %t%
+	Hotkey, %MechanicKey%, mechanicLabel, %t%
+	Hotkey, %LesterKey%, lesterLabel, %t%
+	Hotkey, %BuzzardKey%, buzzardLabel, %t%
+	Hotkey, %GhostKey%, ghostLabel, %t%
+	Hotkey, %ArmorKey%, armorLabel, %t%
+	Hotkey, %SnackKey%, snackLabel, %t%
+	Hotkey, %BullsharkKey%, bullsharkLabel, %t%
+	Hotkey, %AmmoKey%, ammoLabel, %t%
+	Hotkey, %ToggleCeoKey%, toggleCeoLabel, %t%
+	Hotkey, %MorsMutualKey%, morsMutualLabel, %t%
+	Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, %t%
+	Hotkey, %FastEwoKey%, fastEwoLabel, %t%
+	Hotkey, %RepeatButtonKey%, repeatButtonLabel, %t%
+	Hotkey, %CrosshairKey%, crossHairLabel, %t%
+	Hotkey, %OutfitFixKey%, outfitFixLabel, %t%
+	
+	T := false
+}
+
 phoneUp() {
 	setkeydelay, %keyPhoneDalay%, %keyPhoneDuration%
 	Send {Up}
