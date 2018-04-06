@@ -1,14 +1,14 @@
 # QuickMacro
 GTA Online useful macros
 
-# Installation and using
+### Installation and using
 1. [Download](https://github.com/MacMailler/QuickMacro/releases) latest version
 2. Unpack to any place
 3. Run GTA Online
-4. Run QuickMacro.exe
+4. Run QuickMacro.exe (after opening GTAV window)
 5. Press the "End" key
 
-# Hotkeys
+### Hotkeys
 + End - Enable/Disable
 + Num0 + Num1 - Call Pegasus
 + Num0 + Num2 - Call Mechanic
@@ -25,3 +25,4 @@ GTA Online useful macros
 + LAlt - Fast heavy weapon reload
 + NumEnter - Fast EWO
 + NumDot - Get snack
++ RCtrl & RShift - Outfit fix
