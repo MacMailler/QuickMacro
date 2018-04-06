@@ -3,12 +3,11 @@
 ; GitHub: https://github.com/MacMailler/QuickMacro
 ;
 
-Global SettingsFile := "settings.ini"
+Global SettingsFile := "QuickMacro.ini"
 
 loadConf() {
 	IfExist, %SettingsFile%
 	{
-		
 		IniRead, keyPhoneDalay, %SettingsFile%, Delays, KeyPhoneDalay
 		IniRead, keyPhoneDuration, %SettingsFile%, Delays, KeyPhoneDuration
 		IniRead, phoneDelay, %SettingsFile%, Delays, PhoneDelay
