@@ -64,16 +64,16 @@ callService(s) {
 	Send {Right}{Up}{Enter}
 	
 	if(s = "Pegasus")
-		Send {Up 3}{Enter}
+		Send {Left}{Enter}
 		
 	else if(s = "MorsMutual")
-		Send {Up 4}{Enter}
+		Send {Left}{Up 2}{Enter}
 		
 	else if(s = "Mechanic")
-		Send {Up 6}{Enter}
+		Send {Left 2}{Down}{Enter}
 
 	else if(s = "Lester")
-		Send {Up 10}{Enter}
+		Send {Left 3}{Down 2}{Enter}
 }
 
 ceoAbil(a) {
@@ -95,9 +95,9 @@ getItem(i) {
 	openM()
 	if(i = "Armor") {
 		if(playerState = 0)
-			Send {Down}
-		else
 			Send {Down 2}
+		else
+			Send {Down 3}
 		Send {Enter}{Down}{Enter}{Up 3}{Enter}
 	}
 	else if(i = "Snack") {
@@ -109,9 +109,9 @@ getItem(i) {
 	}
 	else if(i = "Ammo") {
 		if(playerState = 0)
-			Send {Down}
-		else
 			Send {Down 2}
+		else
+			Send {Down 3}
 		Send {Enter}{Down 3}{Enter}{Up}{Enter}
 	}
 	Send {SC032}
