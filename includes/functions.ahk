@@ -102,9 +102,9 @@ getItem(i) {
 	}
 	else if(i = "Snack") {
 		if(playerState = 0)
-			Send {Down}
-		else
 			Send {Down 2}
+		else
+			Send {Down 3}
 		Send {Enter}{Down 2}{Enter 3}
 	}
 	else if(i = "Ammo") {
