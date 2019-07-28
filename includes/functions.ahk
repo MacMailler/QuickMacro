@@ -67,13 +67,13 @@ callService(s) {
 		Send {Left}{Enter}
 		
 	else if(s = "MorsMutual")
-		Send {Left}{Up 2}{Enter}
+		Send {Left}{Down 2}{Enter}
 		
 	else if(s = "Mechanic")
-		Send {Left 2}{Down}{Enter}
+		Send {Left 2}{Enter}
 
 	else if(s = "Lester")
-		Send {Left 3}{Down 2}{Enter}
+		Send {Left 3}{Down}{Enter}
 }
 
 ceoAbil(a) {
