@@ -59,3 +59,7 @@ return
 usageLabel:
 	usage("Usage")
 return
+
+passiveModeLabel:
+	togglePassive()
+return
