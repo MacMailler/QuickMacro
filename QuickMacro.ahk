@@ -1,8 +1,3 @@
-;
-; Copyright (C) 2017 MacMailler
-; GitHub: https://github.com/MacMailler/QuickMacro
-;
-
 #NoEnv
 #InstallKeybdHook
 #SingleInstance force
@@ -11,7 +6,6 @@
 #Include %A_ScriptDir%\includes\keys.ahk
 #Include %A_ScriptDir%\includes\conf.ahk
 #Include %A_ScriptDir%\includes\tray.ahk
-#Include %A_ScriptDir%\includes\crosshair.ahk
 
 loadConf()
 
