@@ -28,5 +28,5 @@ While in game, hitting NumpadMult will show the association between keys and act
 
 
 <p align="center">
-  <img src="usage.png" title="Usage">
+  <img src="Usage.png" title="Usage">
 </p>
