@@ -1,8 +1,3 @@
-;
-; Copyright (C) 2017 MacMailler
-; GitHub: https://github.com/MacMailler/QuickMacro
-;
-
 init() {
 	if (WinExist("Grand Theft Auto V")) {
 		hotkeyState := hotkeyState = "On" ? "Off" : "On"
@@ -23,25 +18,21 @@ setHotkeyState(t) {
 	Hotkey, %PegasusKey%, pegasusLabel, %t%
 	Hotkey, %MechanicKey%, mechanicLabel, %t%
 	Hotkey, %LesterKey%, lesterLabel, %t%
-	Hotkey, %BuzzardKey%, buzzardLabel, %t%
 	Hotkey, %GhostKey%, ghostLabel, %t%
 	Hotkey, %ArmorKey%, armorLabel, %t%
+	Hotkey, %VehicleKey%, vehicleLabel, %t%
+	Hotkey, %Mk2Key%, mk2Label, %t%
 	Hotkey, %SnackKey%, snackLabel, %t%
-	Hotkey, %BullsharkKey%, bullsharkLabel, %t%
-	Hotkey, %AmmoKey%, ammoLabel, %t%
 	Hotkey, %ToggleCeoKey%, toggleCeoLabel, %t%
 	Hotkey, %MorsMutualKey%, morsMutualLabel, %t%
-	Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, %t%
-	Hotkey, %FastEwoKey%, fastEwoLabel, %t%
-	Hotkey, %RepeatButtonKey%, repeatButtonLabel, %t%
-	Hotkey, %CrosshairKey%, crossHairLabel, %t%
-	Hotkey, %OutfitFixKey%, outfitFixLabel, %t%
+	Hotkey, %BribeKey%, bribeLabel, %t%
+	Hotkey, %UsageKey%, usageLabel, %t%
 	
 	T := false
 }
 
 phoneUp() {
-	setkeydelay, %keyPhoneDalay%, %keyPhoneDuration%
+	setkeydelay, %keyPhoneDelay%, %keyPhoneDuration%
 	Send {Up}
 	sleep, %phoneDelay%
 }
@@ -67,7 +58,7 @@ callService(s) {
 		Send {Left}{Enter}
 		
 	else if(s = "MorsMutual")
-		Send {Left}{Down 2}{Enter}
+		Send {Left 2}{Down 2}{Enter}
 		
 	else if(s = "Mechanic")
 		Send {Left 2}{Enter}
@@ -80,14 +71,10 @@ ceoAbil(a) {
 	if(playerState = 1) {
 		openM()
 		Send {Enter}
-		if(a = "Buzzard")
-			Send {Up 2}{Enter}{Down 4}{Enter}
-
-		else if(a = "Bullshark")
-			Send {Up 3}{Enter}{Down 1}{Enter}
-		
-		else if(a = "Gost")
+		if(a = "Gost")
 			Send {Up 3}{Enter}{Up 3}{Enter}
+		else if (a = "Bribe")
+			Send {Up 3}{Enter}{Up 2}{Enter}
 	}
 }
 
@@ -107,57 +94,42 @@ getItem(i) {
 			Send {Down 3}
 		Send {Enter}{Down 2}{Enter 3}
 	}
-	else if(i = "Ammo") {
+	else if(i = "Vehicle") {
 		if(playerState = 0)
-			Send {Down 2}
+			Send {Down 4}
 		else
-			Send {Down 3}
-		Send {Enter}{Down 3}{Enter}{Up}{Enter}
+			Send {Down 5}
+		Send {Enter}{Enter}
+	}
+	else if(i = "Mk2") {
+		if(playerState = 0)
+			Send {Down 5}{Enter}{Up}{Enter}{Down 2}{Enter}
+		else
+			Send {Down 6}{Enter}{Up}{Enter}{Down 2}{Enter}
+		Send {Enter}{Enter}
 	}
 	Send {SC032}
 }
 
-fastHeavyReload() {
-	setkeydelay, %keyMDelay%, %keyMDuration%
-	Send {%specialWeaponKey%}
-	Send {%heavyWeaponKey%}
-}
 
-fastEwo() {
-	openM()
-	Send {Up 2}
-	Send {SC02E down}
-	Send {Enter}
-	Send {SC02E up}
-}
 
-toggleCrosshair() {
-	if(crossHairT = false) {
-		Gui, QuickMacroCrosshair: Show
-		WinActivate, ahk_class grcWindow
-	} else {
-		Gui, QuickMacroCrosshair: Hide
-	}
-	crossHairT := !crossHairT
-}
-
-outfitFix() {
-	openM()
-	
-	if(playerState = 0)
-		Send {Down 2}
-	else
-		Send {Down 3}
-	
-	Send {Enter}{Down 3}{Enter}
-	Send {SC032}
-}
-
-repeatButton() {
-	if(T = true) {
-		setTimer, loopRepeatButton, off
-	} else {
-		setTimer, loopRepeatButton, on
-	}
-	T := !T
+usage(u) {
+	if(u = "Usage")
+textUsage = 
+(
+Usage :
+	NumDot : Snacks
+	NumpadDiv : CEO Mode
+	NumpadMult : Show usage
+	Num0 + Num1 : Call Mechanic
+	Num0 + Num2 : Call Lester
+	Num0 + Num3 : Call MorsMutualAssurance
+	Num0 + Num4 : Personal vehicle
+	Num0 + Num5 : Armor
+	Num0 + Num6 : Bribe Authority
+	Num0 + Num7 : Ghost organisation
+	Num0 + Num8 : Call Pegasus
+	Num0 + Num9 : Mk2
+)
+		msgbox, 0x40, QuickMacro, %textUsage%
 }
