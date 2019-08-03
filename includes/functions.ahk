@@ -1,4 +1,4 @@
-init() {
+	init() {
 	if (WinExist("Grand Theft Auto V")) {
 		hotkeyState := hotkeyState = "On" ? "Off" : "On"
 		Menu, Tray, Tip, QuickMacro`n%hotkeyState%
@@ -27,6 +27,7 @@ setHotkeyState(t) {
 	Hotkey, %MorsMutualKey%, morsMutualLabel, %t%
 	Hotkey, %BribeKey%, bribeLabel, %t%
 	Hotkey, %UsageKey%, usageLabel, %t%
+	Hotkey, %PassiveKey%, passiveModeLabel, %t%
 	
 	T := false
 }
@@ -111,6 +112,18 @@ getItem(i) {
 	Send {SC032}
 }
 
+togglePassive(){
+	openM()
+	if(playerState = 0)
+		Send {UP}{Enter}
+	else if (playerState = 1)
+	{
+		Send {Enter}{UP}{Enter},
+		openM()
+		Send {UP}{Enter}
+	}
+}
+
 
 
 usage(u) {
@@ -130,6 +143,7 @@ Usage :
 	Num0 + Num7 : Ghost organisation
 	Num0 + Num8 : Call Pegasus
 	Num0 + Num9 : Mk2
+	Num0 + NumAdd : Passive mode
 )
 		msgbox, 0x40, QuickMacro, %textUsage%
 }
