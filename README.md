@@ -24,6 +24,7 @@ This is a fork from https://github.com/MacMailler/QuickMacro that I reworked to 
 + Num0 + Num9 : Mk2
 
 
+
 While in game, hitting NumpadMult will show the association between keys and action : 
 
 
