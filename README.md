@@ -26,4 +26,7 @@ This is a fork from https://github.com/MacMailler/QuickMacro that I reworked to 
 
 While in game, hitting NumpadMult will show the association between keys and action : 
 
-![Alt text](usage.png?raw=true "Title")
+
+<p align="center">
+  <img src="usage.png" title="Usage">
+</p>
