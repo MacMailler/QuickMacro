@@ -1,28 +1,29 @@
 # QuickMacro
 GTA Online useful macros
+This is a fork from https://github.com/MacMailler/QuickMacro that I reworked to do what I want it to do. Big Thanks to MacMailler for  creating QuickMacro. 
 
 ### Installation and using
-1. [Download](https://github.com/MacMailler/QuickMacro/releases) latest version
-2. Unpack to any place
-3. Run GTA Online
-4. Run QuickMacro.exe (after opening GTAV window)
-5. Press the "End" key
+1. [Download](https://github.com/Liscum/QuickMacro/raw/master/QuickMacro.exe) latest version
+2. Run GTA Online
+3. Run QuickMacro.exe (after opening GTAV window)
+4. Press the "End" key
 
 ### Hotkeys
 + End - Enable/Disable
-+ Num0 + Num1 - Call Pegasus
-+ Num0 + Num2 - Call Mechanic
-+ Num0 + Num3 - Call Lester
-+ Num0 + Num4 - Spawn Buzzard
-+ Num0 + Num5 - Activate ghost team
-+ Num0 + Num6 - Call Mors Mutual Insurance
-+ Num0 + Num7 - Get heavy armor
-+ Num0 + Num8 - Repeat button
-+ Num0 + Num9 - Show/Hide crosshair
-+ NumAdd - Spawn BST(Bull Shark Testosterone)
-+ NumDiv - Toggle CEO Mode
-+ NumSub - Buy ammo
-+ LAlt - Fast heavy weapon reload
-+ NumEnter - Fast EWO
-+ NumDot - Get snack
-+ RCtrl & RShift - Outfit fix
++ NumDot : Snacks
++ NumpadDiv : CEO Mode
++ NumpadMult : Show usage
++ Num0 + Num1 : Call Mechanic
++ Num0 + Num2 : Call Lester
++ Num0 + Num3 : Call MorsMutualAssurance
++ Num0 + Num4 : Personal vehicle
++ Num0 + Num5 : Armor
++ Num0 + Num6 : Bribe Authority
++ Num0 + Num7 : Ghost organisation
++ Num0 + Num8 : Call Pegasus
++ Num0 + Num9 : Mk2
+
+
+While in game, hitting NumpadMult will show the association between keys and action : 
+
+![Alt text](usage.png?raw=true "Title")
