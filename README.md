@@ -21,11 +21,10 @@ This is a fork from https://github.com/MacMailler/QuickMacro that I reworked to 
 + Num0 + Num6 : Bribe Authority
 + Num0 + Num7 : Ghost organisation
 + Num0 + Num8 : Call Pegasus
-+ Num0 + Num9 : Mk2
++ Num0 + Num9 : Mk2  
 
-  
 
-  While in game, hitting NumpadMult will show the association between keys and action : 
+While in game, hitting NumpadMult will show the association between keys and action : 
 
 
 <p align="center">
