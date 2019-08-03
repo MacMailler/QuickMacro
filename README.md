@@ -25,7 +25,7 @@ This is a fork from https://github.com/MacMailler/QuickMacro that I reworked to 
 
   
 
-While in game, hitting NumpadMult will show the association between keys and action : 
+  While in game, hitting NumpadMult will show the association between keys and action : 
 
 
 <p align="center">
