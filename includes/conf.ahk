@@ -23,6 +23,7 @@ loadConf() {
 		IniRead, MorsMutualKey, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniRead, BribeKey, %SettingsFile%, Hotkeys, BribeKey
 		IniRead, UsageKey, %SettingsFile%, Hotkeys, UsageKey
+		IniRead, PassiveKey, %SettingsFile%, Hotkeys, PassiveKey
 	} else {
 		IniWrite, %keyPhoneDelay%, %SettingsFile%, Delays, KeyPhoneDelay
 		IniWrite, %keyPhoneDuration%, %SettingsFile%, Delays, KeyPhoneDuration
@@ -44,5 +45,6 @@ loadConf() {
 		IniWrite, %MorsMutualKey%, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniWrite, %BribeKey%, %SettingsFile%, Hotkeys, BribeKey
 		IniWrite, %UsageKey%, %SettingsFile%, Hotkeys, UsageKey
+		IniWrite, %PassiveKey%, %SettingsFile%, Hotkeys, PassiveKey
 	}
 }
