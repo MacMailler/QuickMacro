@@ -1,5 +1,5 @@
 # QuickMacro
-GTA Online useful macros
+GTA Online useful macros  
 This is a fork from https://github.com/MacMailler/QuickMacro that I reworked to do what I want it to do. Big Thanks to MacMailler for  creating QuickMacro. 
 
 ### Installation and using
