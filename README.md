@@ -25,7 +25,7 @@ Features like sound when enabling QuickMacro/CEO Mode or Empty session are comin
 + Num0 + Num8 : Personal vehicle
 + Num0 + Num9 : Mk2
 + Num0 + NumAdd : Lower Wanted Level
-
++	RCtrl + RShift : Empty session
 While in game, hitting NumpadMult will show the association between keys and actions : 
 
 
