@@ -164,6 +164,7 @@ Usage :
 	Num0 + Num8 : Personal vehicle
 	Num0 + Num9 : Mk2
 	Num0 + NumAdd : Lower wanted level
+	RCtrl + RShift : Empty session
 )
 		msgbox, 0x40, QuickMacro, %textUsage%
 }
