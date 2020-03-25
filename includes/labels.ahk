@@ -1,8 +1,4 @@
 ; Services
-pegasusLabel:
-	callService("Pegasus")
-return
-
 mechanicLabel:
 	callService("Mechanic")
 return
@@ -15,6 +11,9 @@ morsMutualLabel:
 	callService("MorsMutual")
 return
 
+AssistantLabel:
+	callService("Assistant")
+return
 
 
 ; CEO abilities
@@ -60,6 +59,10 @@ usageLabel:
 	usage("Usage")
 return
 
-passiveModeLabel:
-	togglePassive()
+lowerWantedLevelLabel:
+	lowerWantedLevel()
+return
+
+emptySessionLabel:
+	emptySession()
 return

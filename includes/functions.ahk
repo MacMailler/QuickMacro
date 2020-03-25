@@ -1,33 +1,45 @@
-	init() {
-	if (WinExist("Grand Theft Auto V")) {
-		hotkeyState := hotkeyState = "On" ? "Off" : "On"
-		Menu, Tray, Tip, QuickMacro`n%hotkeyState%
+init() {
+	ceo_status = Disabled
+	if (WinExist(GameTitle)) {
+		hotkeyState := hotkeyState = "ON" ? "OFF" : "ON"
+		if (playerState = 0) {
+			Menu, Tray, Tip,GTAO Macro: %hotkeyState%`nVIP Mode: Disabled
+		} else { 
+			Menu, Tray, Tip,GTAO Macro: %hotkeyState%`nVIP Mode: Enabled
+		}
 		setHotkeyState(hotkeyState)
 		
-		if (hotkeyState = "On")
+		if (hotkeyState = "ON") {
 			Menu, Tray, Rename, Activate, Deactivate
-		else
+			SoundBeep, 800	
+		} else{
 			Menu, Tray, Rename, Deactivate, Activate
+			SoundBeep, 450
+		}
 	} else {
-		msgbox, 0x40, QuickMacro, GTAV is not running!
+		msgbox, 16, Error, GTA V is not running!
 	}
 }
 	
 setHotkeyState(t) {
 	Hotkey, IfWinActive, Grand Theft Auto V
-	Hotkey, %PegasusKey%, pegasusLabel, %t%
+
 	Hotkey, %MechanicKey%, mechanicLabel, %t%
 	Hotkey, %LesterKey%, lesterLabel, %t%
-	Hotkey, %GhostKey%, ghostLabel, %t%
+	Hotkey, %MorsMutualKey%, morsMutualLabel, %t%
+	Hotkey, %AssistantKey%, AssistantLabel, %t%
 	Hotkey, %ArmorKey%, armorLabel, %t%
+	Hotkey, %BribeKey%, bribeLabel, %t%
+	Hotkey, %GhostKey%, ghostLabel, %t%
 	Hotkey, %VehicleKey%, vehicleLabel, %t%
 	Hotkey, %Mk2Key%, mk2Label, %t%
 	Hotkey, %SnackKey%, snackLabel, %t%
 	Hotkey, %ToggleCeoKey%, toggleCeoLabel, %t%
-	Hotkey, %MorsMutualKey%, morsMutualLabel, %t%
-	Hotkey, %BribeKey%, bribeLabel, %t%
+	Hotkey, %LowerWantedLevelKey%, lowerWantedLevelLabel, %t%	
+	Hotkey, %EmptySessionKey%, emptySessionLabel, %t%
+
 	Hotkey, %UsageKey%, usageLabel, %t%
-	Hotkey, %PassiveKey%, passiveModeLabel, %t%
+
 	
 	T := false
 }
@@ -45,27 +57,34 @@ openM() {
 }
 
 toggleCeo() {
-	if(playerState = 0)
+	if (playerState = 0) {
 		playerState := 1
-	else
+		ceo_status = Enabled
+		Menu, Tray, Tip,GTAO Macro: %hotkeyState%`nVIP Mode: %ceo_status%
+		SoundPlay, %A_ScriptDir%\assets\vip-enabled.mp3, Wait
+	} else {
 		playerState := 0
+		ceo_status = Disabled
+		Menu, Tray, Tip,GTAO Macro: %hotkeyState%`nVIP Mode: %ceo_status%
+		SoundPlay, %A_ScriptDir%\assets\vip-disabled.mp3, Wait
+	}
 }
 
 callService(s) {
 	phoneUp()
 	Send {Right}{Up}{Enter}
-	
-	if(s = "Pegasus")
-		Send {Left}{Enter}
-		
-	else if(s = "MorsMutual")
-		Send {Left 2}{Down 2}{Enter}
-		
-	else if(s = "Mechanic")
-		Send {Left 2}{Enter}
+
+	if(s = "Mechanic")
+		Send {Left 2}{Up}{Enter}
 
 	else if(s = "Lester")
-		Send {Left 3}{Down}{Enter}
+		Send {Left 3}{Enter}
+		
+	else if(s = "MorsMutual")
+		Send {Left 2}{Down}{Enter}
+
+	else if(s = "Assistant")
+		Send {Left 5}{Enter}
 }
 
 ceoAbil(a) {
@@ -112,19 +131,20 @@ getItem(i) {
 	Send {SC032}
 }
 
-togglePassive(){
+lowerWantedLevel(){
 	openM()
 	if(playerState = 0)
-		Send {UP}{Enter}
-	else if (playerState = 1)
-	{
-		Send {Enter}{UP}{Enter},
-		openM()
-		Send {UP}{Enter}
-	}
+		Send {Down 3}{Enter}{Down}{Enter}{Down}{Right}{ESC 3}
+	else
+		Send {Down 4}{Enter}{Down}{Enter}{Down}{Right}{ESC 3}
 }
 
-
+emptySession() {
+    Process_Suspend("GTA5.exe")
+    Sleep, 10000
+    Process_Resume("GTA5.exe")
+	MsgBox, 64, %Title% %version%, Session cleared!, 1
+}
 
 usage(u) {
 	if(u = "Usage")
@@ -137,13 +157,13 @@ Usage :
 	Num0 + Num1 : Call Mechanic
 	Num0 + Num2 : Call Lester
 	Num0 + Num3 : Call MorsMutualAssurance
-	Num0 + Num4 : Personal vehicle
+	Num0 + Num4 : Call Assistant
 	Num0 + Num5 : Armor
 	Num0 + Num6 : Bribe Authority
 	Num0 + Num7 : Ghost organisation
-	Num0 + Num8 : Call Pegasus
+	Num0 + Num8 : Personal vehicle
 	Num0 + Num9 : Mk2
-	Num0 + NumAdd : Passive mode
+	Num0 + NumAdd : Lower wanted level
 )
 		msgbox, 0x40, QuickMacro, %textUsage%
 }

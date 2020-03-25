@@ -1,4 +1,7 @@
-Global hotkeyState := "Off"
+Global Title := "GTA Macro"
+Global GameTitle := "Grand Theft Auto V"
+
+Global hotkeyState := "OFF"
 Global playerState := 0
 
 Global keyPhoneDelay := 70
