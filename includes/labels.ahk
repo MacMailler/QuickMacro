@@ -1,14 +1,4 @@
-;
-; Copyright (C) 2017 MacMailler
-; GitHub: https://github.com/MacMailler/QuickMacro
-;
-
-
 ; Services
-pegasusLabel:
-	callService("Pegasus")
-return
-
 mechanicLabel:
 	callService("Mechanic")
 return
@@ -21,22 +11,22 @@ morsMutualLabel:
 	callService("MorsMutual")
 return
 
+AssistantLabel:
+	callService("Assistant")
+return
+
 
 ; CEO abilities
 toggleCeoLabel:
 	toggleCeo()
 return
 
-buzzardLabel:
-	ceoAbil("Buzzard")
-return
-
 ghostLabel:
 	ceoAbil("Gost")
 return
 
-bullsharkLabel:
-	ceoAbil("Bullshark")
+bribeLabel:
+	ceoAbil("Bribe")
 return
 
 
@@ -49,37 +39,12 @@ snackLabel:
 	getItem("Snack")
 return
 
-ammoLabel:
-	getItem("Ammo")
+vehicleLabel:
+	getItem("Vehicle")
 return
 
-
-; Others
-fastHeavyReloadLabel:
-	fastHeavyReload()
-return
-
-fastEwoLabel:
-	fastEwo()
-return
-
-repeatButtonLabel:
-	repeatButton()
-return
-
-crossHairLabel:
-	toggleCrosshair()
-return
-
-outfitFixLabel:
-	outfitFix()
-return
-
-loopRepeatButton:
-    while(T) {
-		Send {%RepeatButton%}
-		sleep, RepeatButtonDelay
-	}
+mk2Label:
+	getItem("Mk2")
 return
 
 activateLabel:
@@ -88,4 +53,16 @@ return
 
 exitLabel:
 	ExitApp
+return
+
+usageLabel:
+	usage("Usage")
+return
+
+lowerWantedLevelLabel:
+	lowerWantedLevel()
+return
+
+emptySessionLabel:
+	emptySession()
 return
