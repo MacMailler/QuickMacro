@@ -4,7 +4,7 @@
 ;
 
 Global hotkeyState := "Off"
-Global playerState := 0
+Global imMode := 0 ; 0 - regular player, 1 - CEO/member
 
 Global keyPhoneDalay := 70
 Global keyPhoneDuration := 100

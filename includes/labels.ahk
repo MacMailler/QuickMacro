@@ -23,8 +23,8 @@ return
 
 
 ; CEO abilities
-toggleCeoLabel:
-	toggleCeo()
+switchImModeLabel:
+	switchImMode()
 return
 
 buzzardLabel:

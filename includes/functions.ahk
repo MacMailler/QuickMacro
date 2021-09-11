@@ -29,12 +29,17 @@ setHotkeyState(t) {
 	Hotkey, %SnackKey%, snackLabel, %t%
 	Hotkey, %BullsharkKey%, bullsharkLabel, %t%
 	Hotkey, %AmmoKey%, ammoLabel, %t%
-	Hotkey, %ToggleCeoKey%, toggleCeoLabel, %t%
+	Hotkey, %SwitchImModeKey%, switchImModeLabel, %t%
 	Hotkey, %MorsMutualKey%, morsMutualLabel, %t%
 	Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, %t%
 	Hotkey, %RepeatButtonKey%, repeatButtonLabel, %t%
 	Hotkey, %CrosshairKey%, crossHairLabel, %t%
 	Hotkey, %OutfitFixKey%, outfitFixLabel, %t%
+	
+	if (t = "Off") {
+		crossHairT := false
+		Gui, QuickMacroCrosshair: Hide
+	}
 	
 	T := false
 }
@@ -51,11 +56,11 @@ openM() {
 	sleep, %menuDelay%
 }
 
-toggleCeo() {
-	if(playerState = 0)
-		playerState := 1
+switchImMode() {
+	if(imMode = 0)
+		imMode := 1
 	else
-		playerState := 0
+		imMode := 0
 }
 
 callService(s) {
@@ -76,7 +81,7 @@ callService(s) {
 }
 
 ceoAbil(a) {
-	if(playerState = 1) {
+	if(imMode = 1) {
 		openM()
 		Send {Enter}
 		if(a = "Buzzard")
@@ -93,21 +98,21 @@ ceoAbil(a) {
 getItem(i) {
 	openM()
 	if(i = "Armor") {
-		if(playerState = 0)
+		if(imMode = 0)
 			Send {Down}
 		else
 			Send {Down 2}
 		Send {Enter}{Down}{Enter}{Up 3}{Enter}
 	}
 	else if(i = "Snack") {
-		if(playerState = 0)
+		if(imMode = 0)
 			Send {Down}
 		else
 			Send {Down 2}
 		Send {Enter}{Down 2}{Enter 3}
 	}
 	else if(i = "Ammo") {
-		if(playerState = 0)
+		if(imMode = 0)
 			Send {Down}
 		else
 			Send {Down 2}
@@ -135,7 +140,7 @@ toggleCrosshair() {
 outfitFix() {
 	openM()
 	
-	if(playerState = 0)
+	if(imMode = 0)
 		Send {Down 2}
 	else
 		Send {Down 3}

@@ -28,7 +28,7 @@ loadConf() {
 		IniRead, SnackKey, %SettingsFile%, Hotkeys, SnackKey
 		IniRead, BullsharkKey, %SettingsFile%, Hotkeys, BullsharkKey
 		IniRead, AmmoKey, %SettingsFile%, Hotkeys, AmmoKey
-		IniRead, ToggleCeoKey, %SettingsFile%, Hotkeys, ToggleCeoKey
+		IniRead, SwitchImModeKey, %SettingsFile%, Hotkeys, SwitchImModeKey
 		IniRead, MorsMutualKey, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniRead, FastHeavyReloadKey, %SettingsFile%, Hotkeys, FastHeavyReloadKey
 		IniRead, RepeatButtonKey, %SettingsFile%, Hotkeys, RepeatButtonKey
@@ -55,7 +55,7 @@ loadConf() {
 		IniWrite, %SnackKey%, %SettingsFile%, Hotkeys, SnackKey
 		IniWrite, %BullsharkKey%, %SettingsFile%, Hotkeys, BullsharkKey
 		IniWrite, %AmmoKey%, %SettingsFile%, Hotkeys, AmmoKey
-		IniWrite, %ToggleCeoKey%, %SettingsFile%, Hotkeys, ToggleCeoKey
+		IniWrite, %SwitchImModeKey%, %SettingsFile%, Hotkeys, SwitchImModeKey
 		IniWrite, %MorsMutualKey%, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniWrite, %FastHeavyReloadKey%, %SettingsFile%, Hotkeys, FastHeavyReloadKey
 		IniWrite, %RepeatButtonKey%, %SettingsFile%, Hotkeys, RepeatButtonKey
