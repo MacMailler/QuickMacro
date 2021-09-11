@@ -68,16 +68,16 @@ callService(s) {
 	Send {Right}{Up}{Enter}
 	
 	if(s = "Pegasus")
-		Send {Up 3}{Enter}
+		Send {Up 8}{Enter}
 		
 	else if(s = "MorsMutual")
-		Send {Up 4}{Enter}
+		Send {Up 12}{Enter}
 		
 	else if(s = "Mechanic")
-		Send {Up 6}{Enter}
+		Send {Up 14}{Enter}
 
 	else if(s = "Lester")
-		Send {Up 10}{Enter}
+		Send {Up 18}{Enter}
 }
 
 ceoAbil(a) {
@@ -97,27 +97,23 @@ ceoAbil(a) {
 
 getItem(i) {
 	openM()
-	if(i = "Armor") {
-		if(imMode = 0)
-			Send {Down}
-		else
-			Send {Down 2}
-		Send {Enter}{Down}{Enter}{Up 3}{Enter}
-	}
-	else if(i = "Snack") {
-		if(imMode = 0)
-			Send {Down}
-		else
-			Send {Down 2}
-		Send {Enter}{Down 2}{Enter 3}
-	}
-	else if(i = "Ammo") {
-		if(imMode = 0)
-			Send {Down}
-		else
-			Send {Down 2}
-		Send {Enter}{Down 3}{Enter}{Up}{Enter}
-	}
+	
+	if(imMode = 0)
+		Send {Down 2}
+	else
+		Send {Down 3}
+	
+	Send {Enter}
+	
+	if(i = "Armor")
+		Send {Down 3}{Enter}{Up 3}{Enter}
+		
+	else if(i = "Snack")
+		Send {Down 4}{Enter 3}
+		
+	else if(i = "Ammo")
+		Send {Down 5}{Enter}{Up}{Enter}
+		
 	Send {SC032}
 }
 
@@ -141,9 +137,9 @@ outfitFix() {
 	openM()
 	
 	if(imMode = 0)
-		Send {Down 2}
-	else
 		Send {Down 3}
+	else
+		Send {Down 4}
 	
 	Send {Enter}{Down 3}{Enter}
 	Send {SC032}
