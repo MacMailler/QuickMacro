@@ -32,7 +32,6 @@ setHotkeyState(t) {
 	Hotkey, %ToggleCeoKey%, toggleCeoLabel, %t%
 	Hotkey, %MorsMutualKey%, morsMutualLabel, %t%
 	Hotkey, %FastHeavyReloadKey%, fastHeavyReloadLabel, %t%
-	Hotkey, %FastEwoKey%, fastEwoLabel, %t%
 	Hotkey, %RepeatButtonKey%, repeatButtonLabel, %t%
 	Hotkey, %CrosshairKey%, crossHairLabel, %t%
 	Hotkey, %OutfitFixKey%, outfitFixLabel, %t%
@@ -121,14 +120,6 @@ fastHeavyReload() {
 	setkeydelay, %keyMDelay%, %keyMDuration%
 	Send {%specialWeaponKey%}
 	Send {%heavyWeaponKey%}
-}
-
-fastEwo() {
-	openM()
-	Send {Up 2}
-	Send {SC02E down}
-	Send {Enter}
-	Send {SC02E up}
 }
 
 toggleCrosshair() {

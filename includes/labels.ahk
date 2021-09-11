@@ -59,10 +59,6 @@ fastHeavyReloadLabel:
 	fastHeavyReload()
 return
 
-fastEwoLabel:
-	fastEwo()
-return
-
 repeatButtonLabel:
 	repeatButton()
 return

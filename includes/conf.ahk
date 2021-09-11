@@ -31,7 +31,6 @@ loadConf() {
 		IniRead, ToggleCeoKey, %SettingsFile%, Hotkeys, ToggleCeoKey
 		IniRead, MorsMutualKey, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniRead, FastHeavyReloadKey, %SettingsFile%, Hotkeys, FastHeavyReloadKey
-		IniRead, FastEwoKey, %SettingsFile%, Hotkeys, FastEwoKey
 		IniRead, RepeatButtonKey, %SettingsFile%, Hotkeys, RepeatButtonKey
 		IniRead, CrosshairKey, %SettingsFile%, Hotkeys, CrosshairKey
 		IniRead, OutfitFixKey, %SettingsFile%, Hotkeys, OutfitFixKey
@@ -59,7 +58,6 @@ loadConf() {
 		IniWrite, %ToggleCeoKey%, %SettingsFile%, Hotkeys, ToggleCeoKey
 		IniWrite, %MorsMutualKey%, %SettingsFile%, Hotkeys, MorsMutualKey
 		IniWrite, %FastHeavyReloadKey%, %SettingsFile%, Hotkeys, FastHeavyReloadKey
-		IniWrite, %FastEwoKey%, %SettingsFile%, Hotkeys, FastEwoKey
 		IniWrite, %RepeatButtonKey%, %SettingsFile%, Hotkeys, RepeatButtonKey
 		IniWrite, %CrosshairKey%, %SettingsFile%, Hotkeys, CrosshairKey
 		IniWrite, %OutfitFixKey%, %SettingsFile%, Hotkeys, OutfitFixKey
